@@ -1,0 +1,51 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+      - name: Jenkins Job Trigger
+  # You may pin to the exact commit or the version.
+  # uses: estherk0/jenkins-trigger@70ee28b6020e5894782308052ae4bba253256823
+        uses: estherk0/jenkins-trigger@1.0
+        with:
+          # Jenkins full URL including http/https protocol
+          url: 'http://20.121.32.249:8080'
+          # User name of Jenkins
+          user_name: 'adminuser'
+          # Jenkins API token
+          api_token: '1127f944ea6ba0a2a061690d2ef004c5d0'
+          # Job name
+          job_name: 'Github_poc'
+          # Job parameter in JSON format. ex) {"param1":"value1"}
+      
