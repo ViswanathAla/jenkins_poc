@@ -40,7 +40,7 @@ jobs:
         uses: estherk0/jenkins-trigger@1.0
         with:
           # Jenkins full URL including http/https protocol
-          url: 'http://20.121.32.249:8080'
+          url: 'http://20.121.32.249:8080/api'
           # User name of Jenkins
           user_name: 'adminuser'
           # Jenkins API token
