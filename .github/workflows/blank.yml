@@ -40,13 +40,13 @@ jobs:
         uses: estherk0/jenkins-trigger@1.0
         with:
           # Jenkins full URL including http/https protocol
-          url: 'http://20.121.32.249:8080/api'
+          url: "http://20.121.32.249:8080/job/GithubPoc1"
           # User name of Jenkins
-          user_name: 'adminuser'
+          user_name: "adminuser"
           # Jenkins API token
-          api_token: '1127f944ea6ba0a2a061690d2ef004c5d0'
+          api_token: "1127f944ea6ba0a2a061690d2ef004c5d0"
           # Job name
-          job_name: 'Github_poc/main'
+          job_name: "azpoc1"
           
          
       
