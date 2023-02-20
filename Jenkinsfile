@@ -1,21 +1,10 @@
-#!/usr/bin/env groovy
-pipeline {
+pipeline { 
     agent any
-
     stages {
-        stage('Build') {
+        stage("stage") {
+            when { anyOf { branch 'main'; branch 'azpoc' ; branch 'test' } }
             steps {
-                echo 'Building..main'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo "Hello,main"
             }
         }
     }
