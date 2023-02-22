@@ -35,18 +35,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Jenkins Job Trigger
-  # You may pin to the exact commit or the version.
-  # uses: estherk0/jenkins-trigger@70ee28b6020e5894782308052ae4bba253256823
-        uses: estherk0/jenkins-trigger@1.0
+        uses: Mondtic/build-jenkins-job@v1.0.0
         with:
           # Jenkins full URL including http/https protocol
-          url: "http://20.121.32.249:8080/"
+          jenkins-url: "http://20.121.32.249:8080/"
           # User name of Jenkins
-          user_name: "adminuser"
+          jenkins-user: "adminuser"
           # Jenkins API token
-          api_token: "1127f944ea6ba0a2a061690d2ef004c5d0"
+          jenkins-token: "1127f944ea6ba0a2a061690d2ef004c5d0"
           # Job name
-          job_name: "Github_poc_new/azpoc"
-          
-         
-      
+          jenkins-job: "Github_poc_new/azpoc"
