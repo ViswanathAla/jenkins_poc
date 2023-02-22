@@ -46,7 +46,7 @@ jobs:
           # Jenkins API token
           api_token: "1127f944ea6ba0a2a061690d2ef004c5d0"
           # Job name
-          job_name: "azpoc1"
+          job_name: "Github_poc_new/azpoc"
           
          
       
